@@ -4,6 +4,7 @@ public class Strawberry {
     String kind;
     public Strawberry(){
         super();
+        this.kind = "あまおう";
     }
     public Strawberry(String kind){
         super();
@@ -11,10 +12,9 @@ public class Strawberry {
     }
     public Strawberry(Kind kind){
         super();
-        this.kind = kind.toString();
+        this.kind = kind.name();
     }
     public String getKind(){
-        if(kind == null)return "あまおう";
-        return "とちおとめ";
+        return kind;
     }
 }
