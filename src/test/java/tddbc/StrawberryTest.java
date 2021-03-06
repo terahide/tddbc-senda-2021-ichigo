@@ -1,19 +1,18 @@
 package tddbc;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static tddbc.Kind.*;
 
 /**
  * ＃ todo list
  * ## お題1
- * * いちご(Strawberry)を生成して品種を取得する
- * * サイズを取得する
+ * * [x] いちご(Strawberry)を生成して品種を取得する
+ * * [] サイズを取得する
  */
 public class StrawberryTest {
+    @Nested
     class 品種のテスト{
         @Test
         @DisplayName("あまおう")
