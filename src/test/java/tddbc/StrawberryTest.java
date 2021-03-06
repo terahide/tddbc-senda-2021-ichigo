@@ -108,6 +108,7 @@ public class StrawberryTest {
         @ParameterizedTest(name = "いちごのサイズ差のテスト:{0} and {1} is {2}")
         @CsvSource({
                 "S, S, 0",
+                "S, M, 1",
         })
         public void いちごのサイズ差のテスト(Size サイズ, Size 比較するサイズ, int expected) throws Exception {
             // Setup
