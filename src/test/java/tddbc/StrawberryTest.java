@@ -19,11 +19,14 @@ import static tddbc.Size.*;
  * * [x] サイズを取得する
  * * [] 文字列表現をする
  * ## お題2
- * [x] 25g以上 → LL
- * [X] 20g以上 → L
- * [x] 10g以上 → M
- * [X] 1g以上 → S
- * [] 0gの考慮。現実におきないから後回し
+ * * [x] 25g以上 → LL
+ * * [X] 20g以上 → L
+ * * [x] 10g以上 → M
+ * * [X] 1g以上 → S
+ * * [] 0gの考慮。現実におきないから後回し
+ * ## お題３
+ * * [] 同一品種かどうか
+ * * [] いちごのサイズ差
  */
 public class StrawberryTest {
     @Nested
@@ -80,4 +83,20 @@ public class StrawberryTest {
             assertEquals("あまおう: S", actual);
         }
     }
+    @Nested
+    class  同一品種かどうか{
+        @ParameterizedTest(name="同一品種かどうかのテスト:{0} and {1} is {2}")
+        @CsvSource({
+                "あまおう, あまおう, true",
+        })
+        public void 同一品種かどうかのテスト(Kind 品種, Kind 比較する品種, boolean expected) throws Exception {
+            // Setup
+            Strawberry sut = new Strawberry(品種,1);
+            // Exercise
+            boolean actual = sut.isSameKind(new Strawberry(比較する品種,1));
+            // Verify
+            assertEquals(expected, actual);
+        }
+    }
+
 }

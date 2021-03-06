@@ -24,4 +24,8 @@ public class Strawberry {
     public String toString(){
         return String.format("%s: %s", kind.name(), size.name());
     }
+
+    public boolean isSameKind(Strawberry strawberry) {
+        return false;
+    }
 }
