@@ -20,9 +20,9 @@ public class StrawberryTest {
         // Setup
         Strawberry sut = new Strawberry(あまおう);
         // Exercise
-        String actual = sut.getKind();
+        Kind actual = sut.getKind();
         // Verify
-        assertEquals("あまおう", actual);
+        assertEquals(あまおう, actual);
     }
 
     @Test
@@ -31,9 +31,9 @@ public class StrawberryTest {
         // Setup
         Strawberry sut = new Strawberry(とちおとめ);
         // Exercise
-        String actual = sut.getKind();
+        Kind actual = sut.getKind();
         // Verify
-        assertEquals("とちおとめ", actual);
+        assertEquals(とちおとめ, actual);
     }
 
 }

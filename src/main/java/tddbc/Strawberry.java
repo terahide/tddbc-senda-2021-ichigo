@@ -1,12 +1,12 @@
 package tddbc;
 
 public class Strawberry {
-    String kind;
+    Kind kind;
     public Strawberry(Kind kind){
         super();
-        this.kind = kind.name();
+        this.kind = kind;
     }
-    public String getKind(){
+    public Kind getKind(){
         return kind;
     }
 }
