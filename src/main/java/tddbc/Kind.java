@@ -1,5 +1,5 @@
 package tddbc;
 
 public enum  Kind {
-    あまおう,とちおとめ;
+    あまおう,とちおとめ,もういっこ;
 }
