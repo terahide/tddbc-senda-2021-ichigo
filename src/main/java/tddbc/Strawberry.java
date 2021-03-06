@@ -30,6 +30,6 @@ public class Strawberry {
     }
 
     public int getDiffelence(Strawberry strawberry) {
-        return 0;
+        return this.getSize().getDiffelence(strawberry.getSize());
     }
 }
