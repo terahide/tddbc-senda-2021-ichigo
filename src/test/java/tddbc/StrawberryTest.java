@@ -21,8 +21,9 @@ import static tddbc.Size.*;
  * ## お題2
  * [x] 25g以上 → LL
  * [X] 20g以上 → L
- * [] 10g以上 → M
+ * [x] 10g以上 → M
  * [] 1g以上 → S
+ * [] 0gの考慮。現実におきないから後回し
  */
 public class StrawberryTest {
     @Nested
