@@ -1,6 +1,9 @@
 package tddbc;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static tddbc.Kind.*;
@@ -17,6 +20,18 @@ import static tddbc.Size.S;
 public class StrawberryTest {
     @Nested
     class 品種のテスト{
+        @ParameterizedTest
+        @EnumSource(Kind.class)
+        @DisplayName("")
+        public void 品種のテスト(Kind 品種) throws Exception {
+            // Setup
+            Strawberry sut = new Strawberry(品種,S);
+            // Exercise
+            Kind actual = sut.getKind();
+            // Verify
+            assertEquals(品種, actual);
+        }
+
         @Test
         @DisplayName("あまおう")
         public void あまおう() throws Exception {
