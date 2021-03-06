@@ -3,10 +3,6 @@ package tddbc;
 public class Strawberry {
     Kind kind;
     Size size;
-    public Strawberry(Kind kind){
-        super();
-        this.kind = kind;
-    }
     public Strawberry(Kind kind,Size size){
         super();
         this.kind = kind;

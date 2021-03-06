@@ -38,7 +38,7 @@ public class StrawberryTest {
             // Verify
             assertEquals(とちおとめ, actual);
         }
-        
+
         @Test
         @DisplayName("もういっこ")
         public void もういっこ() throws Exception {
