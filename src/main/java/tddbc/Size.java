@@ -7,6 +7,7 @@ public enum Size {
         if(25 <= weight){
             return LL;
         }
-        return L;
+        if(20 <= weight) return L;
+        return M;
     }
 }
