@@ -103,4 +103,20 @@ public class StrawberryTest {
         }
     }
 
+    @Nested
+    class いちごのサイズ差のテスト {
+        @ParameterizedTest(name = "いちごのサイズ差のテスト:{0} and {1} is {2}")
+        @CsvSource({
+                "S, S, 0",
+        })
+        public void いちごのサイズ差のテスト(Size サイズ, Size 比較するサイズ, int expected) throws Exception {
+            // Setup
+            Strawberry sut = new Strawberry(あまおう, サイズ);
+            // Exercise
+            int actual = sut.getDiffelence(new Strawberry(あまおう, 比較するサイズ));
+            // Verify
+            assertEquals(expected, actual);
+        }
+    }
+
 }
