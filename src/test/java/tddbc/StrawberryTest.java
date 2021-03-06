@@ -22,7 +22,7 @@ import static tddbc.Size.*;
  * [x] 25g以上 → LL
  * [X] 20g以上 → L
  * [x] 10g以上 → M
- * [] 1g以上 → S
+ * [X] 1g以上 → S
  * [] 0gの考慮。現実におきないから後回し
  */
 public class StrawberryTest {
@@ -70,5 +70,14 @@ public class StrawberryTest {
             assertEquals(expected, actual);
         }
 
+        @Test
+        public void 文字列表現のテスト() throws Exception {
+            // Setup
+            Strawberry sut = new Strawberry(あまおう,1);
+            // Exercise
+            String actual = sut.toString();
+            // Verify
+            assertEquals("あまおう: S", actual);
+        }
     }
 }
