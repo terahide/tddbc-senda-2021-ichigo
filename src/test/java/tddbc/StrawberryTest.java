@@ -47,4 +47,15 @@ public class StrawberryTest {
         assertEquals("あまおう", actual);
     }
 
+    @Test
+    @DisplayName("いちごを生成するテスト とちおとめ")
+    public void とちおとめテスト_() throws Exception {
+        // Setup
+        Strawberry sut = new Strawberry(とちおとめ);
+        // Exercise
+        String actual = sut.getKind();
+        // Verify
+        assertEquals("とちおとめ", actual);
+    }
+
 }
