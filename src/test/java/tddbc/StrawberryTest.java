@@ -20,6 +20,17 @@ import static tddbc.Size.S;
 public class StrawberryTest {
     @ParameterizedTest
     @EnumSource(Kind.class)
+    public void 品種の文字列表現のテスト(Kind 品種) throws Exception {
+        // Setup
+        Strawberry sut = new Strawberry(品種,S);
+        // Exercise
+        String actual = sut.toString();
+        // Verify
+        assertEquals(String.format("%s: S", 品種.name()), actual);
+    }
+
+    @ParameterizedTest
+    @EnumSource(Kind.class)
     public void 品種のテスト(Kind 品種) throws Exception {
         // Setup
         Strawberry sut = new Strawberry(品種,S);
