@@ -16,7 +16,7 @@ import static tddbc.Kind.*;
 public class StrawberryTest {
     @Test
     @DisplayName("いちごを生成するテスト あまおう")
-    public void あまおうテスト_() throws Exception {
+    public void あまおうテスト() throws Exception {
         // Setup
         Strawberry sut = new Strawberry(あまおう);
         // Exercise
@@ -27,7 +27,7 @@ public class StrawberryTest {
 
     @Test
     @DisplayName("いちごを生成するテスト とちおとめ")
-    public void とちおとめテスト_() throws Exception {
+    public void とちおとめテスト() throws Exception {
         // Setup
         Strawberry sut = new Strawberry(とちおとめ);
         // Exercise
