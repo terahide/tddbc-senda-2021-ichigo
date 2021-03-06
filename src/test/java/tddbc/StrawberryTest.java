@@ -14,9 +14,6 @@ import static tddbc.Kind.*;
  * * サイズを取得する
  */
 public class StrawberryTest {
-
-    @BeforeEach
-
     @Test
     @DisplayName("いちごを生成するテスト あまおう")
     public void あまおうテスト() throws Exception {
