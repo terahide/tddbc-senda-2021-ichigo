@@ -55,6 +55,8 @@ public class StrawberryTest {
         @CsvSource({
                 "25, LL",
                 "24, L",
+                "20, L",
+                "19, M",
         })
         public void いちごのサイズのテスト(int 重さ, Size expected) throws Exception {
             // Setup
