@@ -2,6 +2,8 @@ package tddbc;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -50,14 +52,14 @@ public class StrawberryTest {
     @Nested
     class いちごのサイズのテスト{
         @ParameterizedTest(name="品種の文字列表現のテスト:{0}")
-        @ValueSource(ints=25)
-        public void 品種の文字列表現のテスト(int 重さ) throws Exception {
+        @CsvSource({"25, LL"})
+        public void 品種の文字列表現のテスト(int 重さ, Size expected) throws Exception {
             // Setup
             Strawberry sut = new Strawberry(あまおう,重さ);
             // Exercise
             Size actual = sut.getSize();
             // Verify
-            assertEquals(LL, actual);
+            assertEquals(expected, actual);
         }
 
     }
