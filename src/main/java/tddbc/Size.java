@@ -18,7 +18,10 @@ public enum Size {
     }
 
     public int getDiffelence(Size size) {
-        int i = size.weight - this.weight;
+        return abs( size.weight - this.weight );
+    }
+
+    int abs(int i) {
         if(0 <= i) return i;
         return i * -1;
     }
