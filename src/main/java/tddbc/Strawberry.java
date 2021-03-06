@@ -14,4 +14,9 @@ public class Strawberry {
     public Size getSize(){
         return size;
     }
+
+    @Override
+    public String toString(){
+        return String.format("%s: %s", kind.name(), size.name());
+    }
 }
