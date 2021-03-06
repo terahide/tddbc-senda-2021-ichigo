@@ -4,6 +4,7 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static tddbc.Kind.*;
+import static tddbc.Size.S;
 
 
 /**
