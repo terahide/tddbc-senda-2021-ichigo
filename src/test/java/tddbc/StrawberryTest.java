@@ -28,9 +28,19 @@ public class StrawberryTest {
         // Verify
         assertEquals(品種, actual);
     }
-    
+
     @Nested
     class サイズのテスト {
+        @ParameterizedTest
+        @EnumSource(Size.class)
+        public void サイズのテスト(Size サイズ) throws Exception {
+            // Setup
+            Strawberry sut = new Strawberry(あまおう, サイズ);
+            // Exercise
+            Size actual = sut.getSize();
+            // Verify
+            assertEquals(サイズ, actual);
+        }
         @Test
         @DisplayName("S")
         public void s() throws Exception {
