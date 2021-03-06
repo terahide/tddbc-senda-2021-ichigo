@@ -16,11 +16,11 @@ public class SampleTest {
     @DisplayName("should return Hello TDD Boot Camp")
     public void _should_return_Hello_TDD_BootCamp() throws Exception {
         // Setup
-        Sample sut = new Sample();
+        Strawberry sut = new Strawberry();
         // Exercise
-        String actual = sut.say();
+        String actual = sut.getKind();
         // Verify
-        assertEquals("Hello TDD BootCamp!", actual);
+        assertEquals("あまおう", actual);
     }
 
 }
