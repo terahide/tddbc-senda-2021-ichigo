@@ -16,28 +16,6 @@ import static tddbc.Kind.*;
 public class StrawberryTest {
     @Test
     @DisplayName("いちごを生成するテスト あまおう")
-    public void あまおうテスト() throws Exception {
-        // Setup
-        Strawberry sut = new Strawberry();
-        // Exercise
-        String actual = sut.getKind();
-        // Verify
-        assertEquals("あまおう", actual);
-    }
-
-    @Test
-    @DisplayName("いちごを生成するテスト とちおとめ")
-    public void とちおとめテスト() throws Exception {
-        // Setup
-        Strawberry sut = new Strawberry("とちおとめ");
-        // Exercise
-        String actual = sut.getKind();
-        // Verify
-        assertEquals("とちおとめ", actual);
-    }
-
-    @Test
-    @DisplayName("いちごを生成するテスト あまおう")
     public void あまおうテスト_() throws Exception {
         // Setup
         Strawberry sut = new Strawberry(あまおう);
