@@ -1,8 +1,11 @@
 package tddbc;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.*;
+import static tddbc.Kind.*;
 
 /**
  * ＃ todo list
@@ -11,6 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
  * * サイズを取得する
  */
 public class StrawberryTest {
+
+    @BeforeEach
 
     @Test
     @DisplayName("いちごを生成するテスト あまおう")
@@ -32,6 +37,17 @@ public class StrawberryTest {
         String actual = sut.getKind();
         // Verify
         assertEquals("とちおとめ", actual);
+    }
+
+    @Test
+    @DisplayName("いちごを生成するテスト あまおう")
+    public void あまおうテスト_() throws Exception {
+        // Setup
+        Strawberry sut = new Strawberry(あまおう);
+        // Exercise
+        String actual = sut.getKind();
+        // Verify
+        assertEquals("あまおう", actual);
     }
 
 }
