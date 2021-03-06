@@ -109,6 +109,7 @@ public class StrawberryTest {
         @CsvSource({
                 "S, S, 0",
                 "S, M, 1",
+                "M, S, 1",
         })
         public void いちごのサイズ差のテスト(Size サイズ, Size 比較するサイズ, int expected) throws Exception {
             // Setup
