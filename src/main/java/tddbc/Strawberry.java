@@ -8,6 +8,11 @@ public class Strawberry {
         this.kind = kind;
         this.size = size;
     }
+    public Strawberry(Kind kind,int weight){
+        super();
+        this.kind = kind;
+        this.size = Size.S;
+    }
     public Kind getKind(){
         return kind;
     }

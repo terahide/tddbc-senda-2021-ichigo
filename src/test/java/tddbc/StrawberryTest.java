@@ -7,8 +7,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static tddbc.Kind.*;
-import static tddbc.Size.M;
-import static tddbc.Size.S;
+import static tddbc.Size.*;
 
 
 /**
@@ -47,5 +46,19 @@ public class StrawberryTest {
             // Verify
             assertEquals(String.format("あまおう: %s", サイズ.name()), actual);
         }
+    }
+    @Nested
+    class いちごのサイズのテスト{
+        @ParameterizedTest(name="品種の文字列表現のテスト:{0}")
+        @ValueSource(ints=25)
+        public void 品種の文字列表現のテスト(int 重さ) throws Exception {
+            // Setup
+            Strawberry sut = new Strawberry(あまおう,重さ);
+            // Exercise
+            Size actual = sut.getSize();
+            // Verify
+            assertEquals(LL, actual);
+        }
+
     }
 }
