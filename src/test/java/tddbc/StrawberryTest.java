@@ -51,9 +51,11 @@ public class StrawberryTest {
     }
     @Nested
     class いちごのサイズのテスト{
-        @ParameterizedTest(name="品種の文字列表現のテスト:{0}")
-        @CsvSource({"25, LL"})
-        public void 品種の文字列表現のテスト(int 重さ, Size expected) throws Exception {
+        @ParameterizedTest(name="いちごのサイズのテスト:{0} {1}")
+        @CsvSource({
+                "25, LL",
+        })
+        public void いちごのサイズのテスト(int 重さ, Size expected) throws Exception {
             // Setup
             Strawberry sut = new Strawberry(あまおう,重さ);
             // Exercise
