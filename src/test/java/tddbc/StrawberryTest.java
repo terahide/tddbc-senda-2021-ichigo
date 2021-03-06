@@ -88,6 +88,7 @@ public class StrawberryTest {
         @ParameterizedTest(name="同一品種かどうかのテスト:{0} and {1} is {2}")
         @CsvSource({
                 "あまおう, あまおう, true",
+                "あまおう, もういっこ, false",
         })
         public void 同一品種かどうかのテスト(Kind 品種, Kind 比較する品種, boolean expected) throws Exception {
             // Setup
