@@ -18,53 +18,17 @@ import static tddbc.Size.S;
  * * [] サイズを取得する
  */
 public class StrawberryTest {
-    @Nested
-    class 品種のテスト{
-        @ParameterizedTest
-        @EnumSource(Kind.class)
-        @DisplayName("")
-        public void 品種のテスト(Kind 品種) throws Exception {
-            // Setup
-            Strawberry sut = new Strawberry(品種,S);
-            // Exercise
-            Kind actual = sut.getKind();
-            // Verify
-            assertEquals(品種, actual);
-        }
-
-        @Test
-        @DisplayName("あまおう")
-        public void あまおう() throws Exception {
-            // Setup
-            Strawberry sut = new Strawberry(あまおう,S);
-            // Exercise
-            Kind actual = sut.getKind();
-            // Verify
-            assertEquals(あまおう, actual);
-        }
-
-        @Test
-        @DisplayName("とちおとめ")
-        public void とちおとめ() throws Exception {
-            // Setup
-            Strawberry sut = new Strawberry(とちおとめ,S);
-            // Exercise
-            Kind actual = sut.getKind();
-            // Verify
-            assertEquals(とちおとめ, actual);
-        }
-
-        @Test
-        @DisplayName("もういっこ")
-        public void もういっこ() throws Exception {
-            // Setup
-            Strawberry sut = new Strawberry(もういっこ,S);
-            // Exercise
-            Kind actual = sut.getKind();
-            // Verify
-            assertEquals(もういっこ, actual);
-        }
+    @ParameterizedTest
+    @EnumSource(Kind.class)
+    public void 品種のテスト(Kind 品種) throws Exception {
+        // Setup
+        Strawberry sut = new Strawberry(品種,S);
+        // Exercise
+        Kind actual = sut.getKind();
+        // Verify
+        assertEquals(品種, actual);
     }
+    
     @Nested
     class サイズのテスト {
         @Test
