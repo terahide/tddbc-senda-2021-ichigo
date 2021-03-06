@@ -5,6 +5,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static tddbc.Kind.*;
 
+
 /**
  * ＃ todo list
  * ## お題1
@@ -45,6 +46,19 @@ public class StrawberryTest {
             Kind actual = sut.getKind();
             // Verify
             assertEquals(もういっこ, actual);
+        }
+    }
+    @Nested
+    class サイズのテスト {
+        @Test
+        @DisplayName("S")
+        public void s() throws Exception {
+            // Setup
+            Strawberry sut = new Strawberry(あまおう, S);
+            // Exercise
+            Size actual = sut.getSize();
+            // Verify
+            assertEquals(S, actual);
         }
     }
 }
