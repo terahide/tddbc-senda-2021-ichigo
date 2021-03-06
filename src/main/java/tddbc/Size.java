@@ -1,5 +1,5 @@
 package tddbc;
 
 public enum Size {
-    S;
+    S,M;
 }

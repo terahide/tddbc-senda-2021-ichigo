@@ -4,6 +4,7 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static tddbc.Kind.*;
+import static tddbc.Size.M;
 import static tddbc.Size.S;
 
 
@@ -60,6 +61,16 @@ public class StrawberryTest {
             Size actual = sut.getSize();
             // Verify
             assertEquals(S, actual);
+        }
+        @Test
+        @DisplayName("M")
+        public void m() throws Exception {
+            // Setup
+            Strawberry sut = new Strawberry(あまおう, M);
+            // Exercise
+            Size actual = sut.getSize();
+            // Verify
+            assertEquals(M, actual);
         }
     }
 }
