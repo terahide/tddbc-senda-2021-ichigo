@@ -11,7 +11,7 @@ public class Strawberry {
     public Strawberry(Kind kind,int weight){
         super();
         this.kind = kind;
-        this.size = Size.LL;
+        this.size = Size.toSize(weight);
     }
     public Kind getKind(){
         return kind;
