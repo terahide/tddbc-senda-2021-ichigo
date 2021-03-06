@@ -26,6 +26,6 @@ public class Strawberry {
     }
 
     public boolean isSameKind(Strawberry strawberry) {
-        return false;
+        return true;
     }
 }
