@@ -20,7 +20,7 @@ import static tddbc.Size.*;
  * * [] 文字列表現をする
  * ## お題2
  * [x] 25g以上 → LL
- * [] 20g以上 → L
+ * [X] 20g以上 → L
  * [] 10g以上 → M
  * [] 1g以上 → S
  */
@@ -57,6 +57,8 @@ public class StrawberryTest {
                 "24, L",
                 "20, L",
                 "19, M",
+                "10, M",
+                "9, S",
         })
         public void いちごのサイズのテスト(int 重さ, Size expected) throws Exception {
             // Setup
