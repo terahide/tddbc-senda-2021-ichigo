@@ -15,7 +15,13 @@ import static tddbc.Size.S;
  * ＃ todo list
  * ## お題1
  * * [x] いちご(Strawberry)を生成して品種を取得する
- * * [] サイズを取得する
+ * * [x] サイズを取得する
+ * * [] 文字列表現をする
+ * ## お題2
+ * [] 25g以上 → LL
+ * [] 20g以上 → L
+ * [] 10g以上 → M
+ * [] 1g以上 → S
  */
 public class StrawberryTest {
     @ParameterizedTest(name="品種の文字列表現のテスト:{0}")
