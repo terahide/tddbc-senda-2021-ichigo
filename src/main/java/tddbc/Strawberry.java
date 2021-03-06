@@ -30,6 +30,6 @@ public class Strawberry {
     }
 
     public int getDiffelence(Strawberry strawberry) {
-        return -1;
+        return 0;
     }
 }
