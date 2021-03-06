@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class StrawberryTest {
 
     @Test
-    @DisplayName("いちごを生成するテスト")
+    @DisplayName("いちごを生成するテスト あまおう")
     public void あまおうテスト() throws Exception {
         // Setup
         Strawberry sut = new Strawberry();
@@ -21,6 +21,17 @@ public class StrawberryTest {
         String actual = sut.getKind();
         // Verify
         assertEquals("あまおう", actual);
+    }
+
+    @Test
+    @DisplayName("いちごを生成するテスト とちおとめ")
+    public void とちおとめテスト() throws Exception {
+        // Setup
+        Strawberry sut = new Strawberry("とちおとめ");
+        // Exercise
+        String actual = sut.getKind();
+        // Verify
+        assertEquals("とちおとめ", actual);
     }
 
 }
