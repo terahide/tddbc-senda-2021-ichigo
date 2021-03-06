@@ -21,7 +21,7 @@ public class StrawberryTest {
         @DisplayName("あまおう")
         public void あまおう() throws Exception {
             // Setup
-            Strawberry sut = new Strawberry(あまおう);
+            Strawberry sut = new Strawberry(あまおう,S);
             // Exercise
             Kind actual = sut.getKind();
             // Verify
@@ -32,18 +32,18 @@ public class StrawberryTest {
         @DisplayName("とちおとめ")
         public void とちおとめ() throws Exception {
             // Setup
-            Strawberry sut = new Strawberry(とちおとめ);
+            Strawberry sut = new Strawberry(とちおとめ,S);
             // Exercise
             Kind actual = sut.getKind();
             // Verify
             assertEquals(とちおとめ, actual);
         }
-
+        
         @Test
         @DisplayName("もういっこ")
         public void もういっこ() throws Exception {
             // Setup
-            Strawberry sut = new Strawberry(もういっこ);
+            Strawberry sut = new Strawberry(もういっこ,S);
             // Exercise
             Kind actual = sut.getKind();
             // Verify
