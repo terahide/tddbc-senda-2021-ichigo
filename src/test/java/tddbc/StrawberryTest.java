@@ -29,7 +29,7 @@ public class StrawberryTest {
         assertEquals(String.format("%s: S", 品種.name()), actual);
     }
 
-    @ParameterizedTest
+    @ParameterizedTest(name="サイズの文字列表現のテスト:{0}")
     @EnumSource(Size.class)
     public void サイズの文字列表現のテスト(Size サイズ) throws Exception {
         // Setup
