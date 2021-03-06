@@ -10,6 +10,7 @@ public class Strawberry {
         this.kind = kind;
     }
     public String getKind(){
-        return "あまおう";
+        if(kind == null)return "あまおう";
+        return "とちおとめ";
     }
 }
