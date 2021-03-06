@@ -36,5 +36,16 @@ public class StrawberryTest {
             // Verify
             assertEquals(とちおとめ, actual);
         }
+
+        @Test
+        @DisplayName("もういっこ")
+        public void もういっこ() throws Exception {
+            // Setup
+            Strawberry sut = new Strawberry(もういっこ);
+            // Exercise
+            Kind actual = sut.getKind();
+            // Verify
+            assertEquals(もういっこ, actual);
+        }
     }
 }
