@@ -30,24 +30,13 @@ public class StrawberryTest {
     }
 
     @ParameterizedTest
-    @EnumSource(Kind.class)
-    public void 品種のテスト(Kind 品種) throws Exception {
-        // Setup
-        Strawberry sut = new Strawberry(品種,S);
-        // Exercise
-        Kind actual = sut.getKind();
-        // Verify
-        assertEquals(品種, actual);
-    }
-
-    @ParameterizedTest
     @EnumSource(Size.class)
-    public void サイズのテスト(Size サイズ) throws Exception {
+    public void サイズの文字列表現のテスト(Size サイズ) throws Exception {
         // Setup
         Strawberry sut = new Strawberry(あまおう, サイズ);
         // Exercise
-        Size actual = sut.getSize();
+        String actual = sut.toString();
         // Verify
-        assertEquals(サイズ, actual);
+        assertEquals(String.format("あまおう: %s", サイズ.name()), actual);
     }
 }
