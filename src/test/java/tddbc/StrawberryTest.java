@@ -18,7 +18,7 @@ import static tddbc.Size.S;
  * * [] サイズを取得する
  */
 public class StrawberryTest {
-    @ParameterizedTest
+    @ParameterizedTest(name="品種の文字列表現のテスト:{0}")
     @EnumSource(Kind.class)
     public void 品種の文字列表現のテスト(Kind 品種) throws Exception {
         // Setup
