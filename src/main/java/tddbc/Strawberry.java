@@ -26,6 +26,6 @@ public class Strawberry {
     }
 
     public boolean isSameKind(Strawberry strawberry) {
-        return true;
+        return this.getKind() == strawberry.getKind();
     }
 }

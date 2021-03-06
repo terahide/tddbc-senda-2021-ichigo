@@ -25,7 +25,7 @@ import static tddbc.Size.*;
  * * [X] 1g以上 → S
  * * [] 0gの考慮。現実におきないから後回し
  * ## お題３
- * * [] 同一品種かどうか
+ * * [x] 同一品種かどうか
  * * [] いちごのサイズ差
  */
 public class StrawberryTest {
@@ -88,7 +88,10 @@ public class StrawberryTest {
         @ParameterizedTest(name="同一品種かどうかのテスト:{0} and {1} is {2}")
         @CsvSource({
                 "あまおう, あまおう, true",
+                "とちおとめ, とちおとめ, true",
+                "もういっこ, もういっこ, true",
                 "あまおう, もういっこ, false",
+                "とちおとめ, もういっこ, false",
         })
         public void 同一品種かどうかのテスト(Kind 品種, Kind 比較する品種, boolean expected) throws Exception {
             // Setup
